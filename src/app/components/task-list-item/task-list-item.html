@@ -1,0 +1,8 @@
+<div class="bg-slate-300 border border-slate-900 p-3 rounded mt-4">
+  {{ taskItem().task }}
+  <div>
+    @for (action of action(); track $index) {
+      <button (click)="markAs(taskItem().task, action)" class="p-1 text-xs border rounded mr-3 my-1 cursor-pointer bg-emerald-700 text-lime-50">{{ action }}</button>
+    }
+  </div>
+</div>
