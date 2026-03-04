@@ -5,7 +5,13 @@
 <div class="grid grid-cols-4 gap-4 px-4">
   <!-- task form -->
   <app-task-form />
+
   <!-- todo tasks -->
+  <app-task-list [tasks]="todoItems()" [heading]="'To Do'" />
+
   <!-- inprogress tasks -->
+  <app-task-list [tasks]="inProgressItems()" [heading]="'In Progess'" />
+
   <!-- completed tasks -->
+  <app-task-list [tasks]="completedItems()" [heading]="'Completed'" />
 </div>

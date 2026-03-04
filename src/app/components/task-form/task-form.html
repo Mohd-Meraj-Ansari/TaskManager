@@ -1,16 +1,20 @@
-<form class="" [formGroup]="taskForm" (ngSubmit) ="onSubmit()">
-  <div>
-    <label for="task" class="block text-center">Task</label>
+<form class="" [formGroup]="taskForm" (ngSubmit)="onSubmit()">
+  <div class="">
+    <label for="task" class="block text-center text-xl font-semibold mb-3">Task</label>
     <textarea
       name=""
       id="task"
-      class="w-full bg-slate-200 border-slate-200 rounded h-20"
+      class="w-full bg-slate-200 border-slate-200 rounded h-20 mt-1"
       formControlName="task"
     ></textarea>
   </div>
   <div>
-    <select name="" id="" class="w-full bg-slate-200 border-slate-200 rounded mt-2"
-    formControlName="status">
+    <select
+      name=""
+      id=""
+      class="w-full bg-slate-200 border-slate-200 rounded mt-2"
+      formControlName="status"
+    >
       <option value="Todo">Todo</option>
       <option value="InProgress">In Progress</option>
       <option value="Completed">Completed</option>
@@ -18,6 +22,8 @@
   </div>
 
   <div>
-    <button type="submit" class="bg-blue-600 px-3 py-1 rounded border-blue-600 cursor-pointer mt-2">Add Task</button>
+    <button type="submit" class="bg-blue-500 px-3 py-1 rounded border-blue-600 cursor-pointer mt-2">
+      Add Task
+    </button>
   </div>
 </form>
